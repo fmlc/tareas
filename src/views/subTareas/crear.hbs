@@ -1,0 +1,45 @@
+<form action="/subTareas/crear" method="post">
+    <div class="container ">
+        <div class="row text-center justify-content-center alig-items-center  h-100 row text-center p-3">
+            <div class="card text-center col-lg-6">
+                <div class="p-0 d-flex justify-content-center" style="color: black;">
+                    <div class="row text-center p-3">
+                        <div class="input-group justify-content-center p-1">
+                            <div class="col-sm-12">
+                                <h1>NUEVA SUB TAREA</h1>
+                            </div>
+                            <div class="col-12">
+                                <div class="col-sm-12">
+                                    <div class="input-group mb-3">
+                                        <input type="hidden" name="id" value="{{id}}">
+                                        <span class="input-group-text"><i class="fas fa-pencil-alt"></i></span>
+                                        <textarea name="descripcion" class="form-control" placeholder="DESCRIPCION"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-success col-5 mb-2"><i
+                                            class="fas fa-check"></i>
+                                        aceptar<i class="far fa-share-all"></i></button>
+                                    <a href="/subTareas/{{id}}" class="btn btn-danger col-5 mb-2"><i
+                                            class="fas fa-chevron-left"></i>
+                                        regresar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+
+<script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+        container: 'body'
+    })
+</script>

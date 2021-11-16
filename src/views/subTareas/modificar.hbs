@@ -1,0 +1,52 @@
+<form action="/subTareas/modificar/?_method=PUT" method="post">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="container ">
+        <div class="row text-center justify-content-center alig-items-center  h-100 row text-center p-3">
+            <div class="card text-center col-lg-6">
+                <div class="p-0 d-flex justify-content-center" style="color: black;">
+                    <div class="row text-center p-3">
+                        <div class="input-group justify-content-center p-1">
+                            <div class="col-12">
+                                <h1>EDITAR</h1>
+                                <input type="hidden" name="id_tarea" value="{{subTarea.id_tarea}}">
+                                <input type="hidden" name="id" value="{{subTarea.id}}">
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+                                    <input type="text" class="form-control" placeholder="TITULO" aria-label="Username"
+                                        aria-describedby="basic-addon1" value="{{subTarea.fecha}}" disabled required>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-pencil-alt"></i></span>
+                                    <textarea name="descripcion" class="form-control" placeholder="DESCRIPCION"
+                                        required>{{subTarea.descripcion}}</textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-success col-5 mb-2"><i class="fas fa-check"></i>
+                                    aceptar<i class="far fa-share-all"></i></button>
+                                <a href="/subTareas/{{subTarea.id_tarea}}" class="btn btn-danger col-5 mb-2"><i
+                                        class="fas fa-chevron-left"></i>
+                                    regresar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+        container: 'body'
+    })
+</script>

@@ -1,0 +1,28 @@
+{{#each messages.msg}}
+<div class="container">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog text-center alig-items-center">
+            <div class="modal-content  {{#if SUCCESS}} alert-primary {{else}} alert-danger {{/if}}">
+                <div class="modal-body text-center alig-items-center">
+                    <h1 class="modal-title" id="exampleModalLabel" style="font-size: 100px;">
+                        {{#if SUCCESS}}
+                        <i class="far fa-check-circle"></i>
+                        {{else}}
+                        <i class="fas fa-times"></i>
+                        {{/if}}
+                    </h1>
+                <hr class="my-12"/>
+                    <strong>{{msg}}</strong>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">CERRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var myModal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
+        myModal.show();
+    </script>
+</div>
+{{/each}}

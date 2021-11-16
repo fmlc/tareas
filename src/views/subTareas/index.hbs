@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row pt-4 m-auto">
+        <div class="col-md-4 col-lg-3 pb-3">
+            <div class="card bg-dark text-white card-custom">
+                <div class="card-header">
+                    <h4 class="card-title">NUEVA SUB TAREA</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Nueva Sub Tarea</p>
+                </div>
+                <div class="card-footer" style="background: inherit; border-color: inherit;">
+                    <a href="/subTareas/crear/{{tarea.id}}" class="btn btn-success col-12"><i class="fas fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3 pb-3">
+            <div class="card bg-secondary text-white card-custom">
+                <div class="card-header">
+                    <h4 class="card-title">{{ tarea.titulo }}</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{ tarea.descripcion}}</p>
+                </div>
+                <div class="card-footer" style="background: inherit; border-color: inherit;">
+                    <a href="/tareas" class="btn btn-danger col-12"><i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+        {{#each subTareas}}
+        <div class="col-md-4 col-lg-3 pb-3">
+            <div class="card bg-white card-custom">
+                <div class="card-header">
+                    <h4 class="card-title">{{ fecha }}</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{ descripcion}}</p>
+                </div>
+                <div class="card-footer d-flex flex-row justify-content-center">
+                    <form method="post" action="/subTareas/ver/" class="p-2">
+                        <input type="hidden" name="id_tarea" value="{{id_tarea}}">
+                        <input type="hidden" name="id" value="{{id}}">
+                        <button class="btn btn-warning col-md-12"><i class="fas fa-pen"></i></button>
+                    </form>
+                    <form method="POST" action="/subTareas/{{id_tarea}}&{{id}}?_method=DELETE" class="p-2">
+                        <input type="hidden" name="_method" values="DELETE">
+                        <button class="btn btn-danger col-md-12"><i class="far fa-trash-alt"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{/each}}        
+    </div>
+</div>

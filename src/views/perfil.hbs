@@ -1,0 +1,59 @@
+<div class="container ">
+    <div class="row text-center justify-content-center alig-items-center  h-100 row text-center p-3">
+        <div class="card text-center col-lg-6">
+            <div class="p-0 d-flex justify-content-center" style="color: black;">
+                <div class="row text-center p-3">
+                    <div class="input-group justify-content-center p-1">
+                        <div class="col-sm-12">
+                            <img src={{lg_session.foto}} style="width: 200px;height: 200px;"
+                                class="rounded-circle z-depth-2" alt="100x100">
+                        </div>
+                        <br><br><br><br><br><br><br><br><br>
+                        <div class="col-12">
+                            <h3>BIENVENIDO <i class="fas fa-user"></i></h3>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text" id="basic-addon1" data-bs-toggle="popover"
+                                    data-bs-placement="left" data-bs-content="DATOS DE USUARIO"><i
+                                        class="fas fa-user"></i></span>
+                                <input class="form-control text-uppercase" type="text" value="{{lg_session.nombre}}"
+                                    aria-label="readonly input example" readonly>
+                                <input class="form-control text-uppercase" type="text" value="{{lg_session.apellidos}}"
+                                    aria-label="readonly input example" readonly>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <form action="/usuarios/cambiarPass" method="post" enctype="multipart/form-data">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                                    <input type="password" name="password" class="form-control" placeholder="PASSWORD"
+                                        aria-label="Username" aria-describedby="basic-addon1">
+                                    <button type="submit" class="btn btn-success"><i class="fas fa-sync"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-12">
+                            <form action="/usuarios/cambiarFoto" method="post" enctype="multipart/form-data">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="basic-addon1"><i class="far fa-image"></i></span>
+                                    <input class="form-control" type="file" name="foto" id="formFile">
+
+                                    <button type="submit" class="btn btn-success"><i class="fas fa-sync"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <br><br><br>
+                        <div class="col-12">
+
+                        </div>
+                        <div class="col-12">
+                            <a href="/tareas" class="btn btn-danger col-12 mb-2"><i class="fas fa-chevron-left"></i>
+                                INICIO</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

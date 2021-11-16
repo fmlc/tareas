@@ -1,0 +1,71 @@
+<form action="/login/CreateUsuario" method="post">
+    <div class="container ">
+        <div class="row text-center justify-content-center alig-items-center  h-100 row text-center p-3">
+            <div class="card text-center col-lg-6">
+                <div class="p-0 d-flex justify-content-center" style="color: black;">
+                    <div class="row text-center p-3">
+                        <div class="input-group justify-content-center p-1">
+                            <div class="col-sm-12">
+                                <h1>CREATE USUARIO</h1>
+                            </div>
+                            <div class="col-sm-12">
+                                <h3>datos personales <i class="far fa-address-card"></i></h3>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-user-edit"></i></span>
+                                    <input type="text" name="nombre" class="form-control" placeholder="NOMBRE"
+                                        aria-label="Username" aria-describedby="basic-addon1" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-user-edit"></i></span>
+                                    <input type="text" name="apellidos" class="form-control" placeholder="APELLIDOS"
+                                        aria-label="Username" aria-describedby="basic-addon1" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <h3>datos usuario <i class="fas fa-user-plus"></i></h3>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    <input type="text" name="usuario" class="form-control" placeholder="USUARIO"
+                                        aria-label="Username" aria-describedby="basic-addon1" required>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    <input type="password" name="password" class="form-control" placeholder="PASSWORD"
+                                        aria-label="Username" aria-describedby="basic-addon1" required>
+                                </div>
+                            </div>
+                            <br><br><br>
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-success col-sm-12 mb-2"><i
+                                        class="fas fa-check"></i>
+                                    aceptar<i class="far fa-share-all"></i></button>
+                            </div>
+                            <div class="col-sm-12">
+                                <a href="/" class="btn btn-danger col-sm-12 mb-2"><i class="fas fa-chevron-left"></i>
+                                    regresar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+    var popover = new bootstrap.Popover(document.querySelector('.example-popover'), {
+        container: 'body'
+    })
+</script>
